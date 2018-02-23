@@ -1,0 +1,8 @@
+<div style="max-width: 700px; margin: 0 auto;">
+  <h1>Add a Dose</h1>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit class: "btn btn-default btn-primary" %>
+    <% end %>
+</div

@@ -1,0 +1,10 @@
+<div style="max-width: 700px; margin: 0 auto;">
+  <h1>Cocktails</h1>
+  <% @cocktails.each do |t| %>
+</div>
+  <div class="container">
+  <h2><%= link_to t.name, cocktail_path(t) %></h2>
+  <%= link_to "Delete", cocktail_path(t), method: :delete, data: {confirm: "Are you sure"} %>
+<% end %>
+</div>
+<%= link_to 'Add new Cocktail', new_cocktail_path,  class: "btn btn-danger"%>
